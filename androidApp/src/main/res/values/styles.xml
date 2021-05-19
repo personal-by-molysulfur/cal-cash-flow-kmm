@@ -1,6 +1,6 @@
 <resources>
 
-    <style name="AppTheme" parent="Theme.AppCompat.DayNight.NoActionBar">
+    <style name="AppTheme" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
@@ -40,5 +40,15 @@
 
     <style name="PlieCardView">
         <item name="android:background">@drawable/calcashflow_shape_gradient_primary_30</item>
+    </style>
+
+    <style name="TextInputField" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <item name="android:textColor">@color/calcashflow_color_white</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:editTextColor">@color/calcashflow_color_white</item>
+        <item name="android:textColorHint">@color/calcashflow_color_white</item>
+        <item name="hintTextColor">@color/calcashflow_color_white</item>
+        <item name="errorEnabled">true</item>
+        <item name="boxStrokeErrorColor">#ff0266</item>
     </style>
 </resources>
