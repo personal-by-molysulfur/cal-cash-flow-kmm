@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    style="@style/AppBackground"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:layout_margin="@dimen/calcashflow_default_padding_margin_extra_extra_small"
+    android:background="@drawable/calcashflow_shape_gradient_primary_30"
+    android:elevation="4dp">
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@color/calcashflow_color_80_accent"
+        app:layout_constraintBottom_toBottomOf="@+id/calcashflow_salary_card_text_salary"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/calcashflow_salary_card_text_salary" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/calcashflow_salary_card_img_setting"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_margin="@dimen/calcashflow_default_padding_margin_normal"
+        android:padding="@dimen/calcashflow_default_padding_margin_normal"
+        android:scaleType="center"
+        android:tint="@color/calcashflow_color_white"
+        app:layout_constraintBottom_toTopOf="@+id/calcashflow_salary_card_text_salary"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/calcashflow_ic_setting" />
+
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/calcashflow_salary_card_text_title"
+        style="@style/TextHeader.White"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/calcashflow_default_padding_margin_normal"
+        android:text="@string/calcashflow_title_salary"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/calcashflow_salary_card_text_salary"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/calcashflow_salary_card_img_icon"
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        android:layout_margin="@dimen/calcashflow_default_padding_margin_normal"
+        android:src="@drawable/calcashflow_ic_credit_chip"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/calcashflow_salary_card_text_salary"
+        style="@style/TextHeader.White"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="end"
+        android:padding="@dimen/calcashflow_default_padding_margin_normal"
+        android:text="@string/calcashflow_title_salary"
+        app:layout_constraintBottom_toBottomOf="@+id/calcashflow_salary_card_img_icon"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/calcashflow_salary_card_img_icon"
+        app:layout_constraintTop_toTopOf="@+id/calcashflow_salary_card_img_icon" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/calcashflow_salary_card_text_name"
+        style="@style/TextHeader2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/calcashflow_default_padding_margin_normal"
+        android:text="@string/calcashflow_title_name"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/calcashflow_salary_card_img_icon" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

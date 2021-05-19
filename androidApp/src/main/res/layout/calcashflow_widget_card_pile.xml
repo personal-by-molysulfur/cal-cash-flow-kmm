@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/PlieCardView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="@dimen/calcashflow_default_padding_margin_extra_extra_small"
+    android:elevation="2dp"
+    android:padding="@dimen/calcashflow_default_padding_margin_normal">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/calcashflow_card_plie_img_icon"
+        android:layout_width="42dp"
+        android:layout_height="42dp"
+        app:layout_constraintBottom_toTopOf="@+id/calcashflow_card_plie_text_money"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="packed"
+        tools:src="@drawable/calcashflow_shape_gradient_primary" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/calcashflow_card_plie_text_percent"
+        style="@style/TextHeader.White"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="end"
+        app:layout_constraintBottom_toBottomOf="@+id/calcashflow_card_plie_img_icon"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/calcashflow_card_plie_img_icon"
+        app:layout_constraintTop_toTopOf="@+id/calcashflow_card_plie_img_icon"
+        tools:text="100%" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/calcashflow_card_plie_text_label"
+        style="@style/TextHeader2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/calcashflow_card_plie_text_money"
+        app:layout_constraintTop_toBottomOf="@+id/calcashflow_card_plie_text_money"
+        tools:text="Investing" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/calcashflow_card_plie_text_money"
+        style="@style/TextHeader.White"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/calcashflow_text_size_normal"
+        android:gravity="bottom"
+        app:layout_constraintBottom_toTopOf="@+id/calcashflow_card_plie_text_label"
+        app:layout_constraintStart_toStartOf="@+id/calcashflow_card_plie_img_icon"
+        app:layout_constraintTop_toBottomOf="@+id/calcashflow_card_plie_img_icon"
+        tools:text="1,000$" />
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="PileCardView">
+        <attr name="pile_card_setIcon" format="reference" />
+        <attr name="pile_card_setLabel" format="string" />
+        <attr name="pile_card_setPercent" format="integer" />
+        <attr name="pile_card_setMoney" format="string" />
+    </declare-styleable>
+
+    <declare-styleable name="SalaryCardView">
+        <attr name="salary_card_setIcon" format="reference" />
+        <attr name="salary_card_setTitle" format="string" />
+        <attr name="salary_card_setName" format="string" />
+        <attr name="salary_card_setSalary" format="float" />
+    </declare-styleable>
+
+</resources>

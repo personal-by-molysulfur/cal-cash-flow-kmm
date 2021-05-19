@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/calcashflow_main_constraint_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/calcashflow_shape_gradient_primary">
+
+        <View
+            android:id="@+id/calcashflow_main_view_chart"
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:layout_marginTop="56dp"
+            android:background="#000"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/calcashflow_main_text_caption"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/calcashflow_default_padding_margin_small"
+            android:text="@string/calcashflow_text_hint"
+            android:textColor="@color/calcashflow_color_white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/calcashflow_main_view_chart" />
+
+
+        <com.molysulfur.app.calcashflow.android.widget.SalaryCardView
+            android:id="@+id/calcashflow_main_salary_card_salary"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/calcashflow_default_padding_margin_normal"
+            app:layout_constraintTop_toBottomOf="@+id/calcashflow_main_text_caption" />
+
+        <com.molysulfur.app.calcashflow.android.widget.PileCardView
+            android:id="@+id/calcashflow_main_plie_card_saving"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/calcashflow_default_padding_margin_normal"
+            app:layout_constraintEnd_toStartOf="@+id/calcashflow_main_plie_card_withdraw"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/calcashflow_main_salary_card_salary"
+            app:pile_card_setIcon="@drawable/calcashflow_ic_saving"
+            app:pile_card_setLabel="@string/calcashflow_title_saving" />
+
+        <com.molysulfur.app.calcashflow.android.widget.PileCardView
+            android:id="@+id/calcashflow_main_plie_card_withdraw"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/calcashflow_default_padding_margin_normal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/calcashflow_main_plie_card_saving"
+            app:layout_constraintTop_toBottomOf="@+id/calcashflow_main_salary_card_salary"
+            app:pile_card_setIcon="@drawable/calcashflow_ic_withdraw"
+            app:pile_card_setLabel="@string/calcashflow_title_withdraw" />
+
+        <com.molysulfur.app.calcashflow.android.widget.PileCardView
+            android:id="@+id/calcashflow_main_plie_card_playing"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/calcashflow_default_padding_margin_normal"
+            app:layout_constraintEnd_toStartOf="@+id/calcashflow_main_plie_card_investing"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/calcashflow_main_plie_card_saving"
+            app:pile_card_setIcon="@drawable/calcashflow_ic_playing"
+            app:pile_card_setLabel="@string/calcashflow_title_playing" />
+
+        <com.molysulfur.app.calcashflow.android.widget.PileCardView
+            android:id="@+id/calcashflow_main_plie_card_investing"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/calcashflow_default_padding_margin_normal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/calcashflow_main_plie_card_playing"
+            app:layout_constraintTop_toBottomOf="@+id/calcashflow_main_plie_card_withdraw"
+            app:pile_card_setIcon="@drawable/calcashflow_ic_investing" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/calcashflow_main_text_version"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/calcashflow_default_padding_margin_normal"
+            android:gravity="center"
+            android:text="@string/calcashflow_app_version"
+            android:textColor="@color/calcashflow_color_white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/calcashflow_main_plie_card_playing" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>

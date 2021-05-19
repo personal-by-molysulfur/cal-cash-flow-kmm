@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Margin Padding-->
+    <dimen name="calcashflow_default_padding_margin_extra_extra_small">4dp</dimen>
+    <dimen name="calcashflow_default_padding_margin_extra_small">8dp</dimen>
+    <dimen name="calcashflow_default_padding_margin_small">14dp</dimen>
+    <dimen name="calcashflow_default_padding_margin_normal">16dp</dimen>
+    <dimen name="calcashflow_default_padding_margin_large">16dp</dimen>
+    <dimen name="calcashflow_default_padding_margin_extra_large">24dp</dimen>
+    <dimen name="calcashflow_default_padding_margin_extra_extra_large">32dp</dimen>
+
+    <!-- Text Size -->
+    <dimen name="calcashflow_text_size_extra_extra_small">8sp</dimen>
+    <dimen name="calcashflow_text_size_extra_small">10sp</dimen>
+    <dimen name="calcashflow_text_size_small">12sp</dimen>
+    <dimen name="calcashflow_text_size_normal">14sp</dimen>
+    <dimen name="calcashflow_text_size_large">16sp</dimen>
+    <dimen name="calcashflow_text_size_extra_large">24sp</dimen>
+    <dimen name="calcashflow_text_size_extra_extra_large">36sp</dimen>
+</resources>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="calcashflow_title_appname">CashFlow</string>
+    <string name="calcashflow_text_molysulfur">By MolySulfur</string>
+    <string name="calcashflow_text_hint">YOU SHOULD HAVE SAVING 10 % OF DEPOSIT</string>
+    <string name="calcashflow_title_saving">Saving</string>
+    <string name="calcashflow_title_withdraw">Withdraw</string>
+    <string name="calcashflow_title_playing">Playing</string>
+    <string name="calcashflow_title_salary">Salary</string>
+    <string name="calcashflow_title_name">Name</string>
+    <string name="calcashflow_app_version">Ver 1.0</string>
+</resources>
