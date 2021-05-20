@@ -21,15 +21,21 @@ kotlin {
             }
         }
     }
+
     sourceSets {
-        val commonMain by getting
+        val commonMain by getting {
+        }
         val commonTest by getting {
             dependencies {
                 implementation(kotlin("test-common"))
                 implementation(kotlin("test-annotations-common"))
             }
         }
-        val androidMain by getting
+        val androidMain by getting {
+            dependencies {
+                implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.4.3")
+            }
+        }
         val androidTest by getting {
             dependencies {
                 implementation(kotlin("test-junit"))
@@ -64,3 +70,6 @@ val packForXcode by tasks.creating(Sync::class) {
 }
 
 tasks.getByName("build").dependsOn(packForXcode)
+dependencies {
+    implementation("androidx.lifecycle:lifecycle-livedata-ktx:2.3.1")
+}

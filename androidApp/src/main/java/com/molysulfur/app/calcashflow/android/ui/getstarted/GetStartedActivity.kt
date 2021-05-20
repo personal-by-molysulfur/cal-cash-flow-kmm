@@ -3,29 +3,34 @@ package com.molysulfur.app.calcashflow.android.ui.getstarted
 import android.os.Bundle
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
+import androidx.fragment.app.commit
+import androidx.lifecycle.Observer
 import com.molysulfur.app.calcashflow.android.R
-import com.molysulfur.app.calcashflow.android.exception.InputNullOrBlankException
 import dagger.hilt.android.AndroidEntryPoint
-import kotlinx.android.synthetic.main.calcashflow_activity_getstarted.calcashflow_getstarted_button_submit as btnSubmit
-import kotlinx.android.synthetic.main.calcashflow_activity_getstarted.calcashflow_getstarted_input_layout_salary as editSalary
 
 @AndroidEntryPoint
 class GetStartedActivity : AppCompatActivity() {
+
     private val viewModel: GetStartedViewModel by viewModels()
+
+    private var salary: Float = 0f
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.calcashflow_activity_getstarted)
-        btnSubmit.setOnClickListener {
-            try {
-                val text = editSalary.editText?.text
-                if (text.isNullOrBlank()) {
-                    throw InputNullOrBlankException()
-                }
-                viewModel.getGeeting()
-            } catch (e: InputNullOrBlankException) {
-                editSalary.error = e.message
-            }
+
+        viewModel.submitSalary.observe(this, submitSalaryObserver)
+
+        supportFragmentManager.commit {
+            replace(R.id.calcashflow_getstarted_layout_container, SalaryFormFragment.newInstance())
+        }
+    }
+
+
+    private val submitSalaryObserver: Observer<Float> = Observer<Float> { salary ->
+        this.salary = salary
+        supportFragmentManager.commit {
+            replace(R.id.calcashflow_getstarted_layout_container, ManageFormFragment.newInstance())
         }
     }
 }

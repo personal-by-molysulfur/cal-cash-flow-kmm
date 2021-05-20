@@ -9,4 +9,5 @@
     <string name="calcashflow_title_salary">Salary</string>
     <string name="calcashflow_title_name">Name</string>
     <string name="calcashflow_app_version">Ver 1.0</string>
+    <string name="calcashflow_title_manage">Manage</string>
 </resources>
