@@ -11,13 +11,13 @@
         android:background="@color/calcashflow_color_primary">
 
         <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/appCompatImageView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:srcCompat="@drawable/calcashflow_bg_qauter_circle_top" />
-
 
         <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/calcashflow_salary_manage_title"
@@ -28,6 +28,47 @@
             android:text="@string/calcashflow_title_manage"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
+
+        <com.molysulfur.app.calcashflow.android.widget.TextFieldWithPercentage
+            android:id="@+id/calcashflow_salary_manage_text_field_saving"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/calcashflow_salary_manage_title"
+            app:text_field_with_percentage_setHintPercentage="(%)"
+            app:text_field_with_percentage_setHintPrice="Saving" />
+
+
+        <com.molysulfur.app.calcashflow.android.widget.TextFieldWithPercentage
+            android:id="@+id/calcashflow_salary_manage_text_field_withdraw"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/calcashflow_salary_manage_text_field_saving"
+            app:text_field_with_percentage_setHintPercentage="(%)"
+            app:text_field_with_percentage_setHintPrice="Withdraw" />
+
+        <com.molysulfur.app.calcashflow.android.widget.TextFieldWithPercentage
+            android:id="@+id/calcashflow_salary_manage_text_field_playing"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/calcashflow_salary_manage_text_field_withdraw"
+            app:text_field_with_percentage_setHintPercentage="(%)"
+            app:text_field_with_percentage_setHintPrice="Playing" />
+
+        <com.molysulfur.app.calcashflow.android.widget.TextFieldWithPercentage
+            android:id="@+id/calcashflow_salary_manage_text_field_investing"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/calcashflow_salary_manage_text_field_playing"
+            app:text_field_with_percentage_setHintPercentage="(%)"
+            app:text_field_with_percentage_setHintPrice="Investing" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

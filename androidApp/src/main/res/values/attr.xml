@@ -15,4 +15,12 @@
         <attr name="salary_card_setSalary" format="float" />
     </declare-styleable>
 
+    <declare-styleable name="TextFieldWithPercentage">
+        <attr name="text_field_with_percentage_setHintPrice" format="string" />
+        <attr name="text_field_with_percentage_setHintPercentage" format="string" />
+        <attr name="text_field_with_percentage_setDefaultPrice" format="float" />
+        <attr name="text_field_with_percentage_setDefaultPercentage" format="integer" />
+    </declare-styleable>
+
+
 </resources>

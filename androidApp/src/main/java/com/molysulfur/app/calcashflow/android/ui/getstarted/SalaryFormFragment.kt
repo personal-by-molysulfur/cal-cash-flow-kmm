@@ -19,6 +19,10 @@ class SalaryFormFragment : Fragment(R.layout.calcashflow_fragment_salary) {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        prepare()
+    }
+
+    private fun prepare() {
         btnSubmit.setOnClickListener {
             try {
                 val salary: Editable? = editSalary.editText?.text
@@ -30,6 +34,5 @@ class SalaryFormFragment : Fragment(R.layout.calcashflow_fragment_salary) {
                 editSalary.error = e.message
             }
         }
-
     }
 }
